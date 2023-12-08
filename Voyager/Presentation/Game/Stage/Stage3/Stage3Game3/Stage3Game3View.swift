@@ -65,13 +65,10 @@ struct Stage3Game3View: View {
                 }
             case .text7:
                 stageView {
-//                    stage3Game3ViewModel.nextText(.text4)
-                    stage3ViewModel.setState(.game4)
+                    stage3Game3ViewModel.nextText(.game)
                 }
             case .game:
-                stageView {
-                    stage3ViewModel.setState(.preview)
-                }
+                UpdetedSportBettingView().environmentObject(UpdetedSportBettingViewModel())
             }
             
         }
@@ -91,7 +88,6 @@ struct Stage3Game3View: View {
             
             Button(action: {
                 nextState()
-                //                stage1ViewModel.setState(.game1)
             }, label: {
                 Text("Дальше")
                     .padding(12)

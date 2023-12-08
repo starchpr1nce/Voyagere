@@ -1,31 +1,35 @@
 import SwiftUI
 
-struct OriginalSportBettingView: View {
+struct UpdetedSportBettingView: View {
     
-    @EnvironmentObject var originalSportBettingViewModel: OriginalSportBettingViewModel
+    @EnvironmentObject var updetedSportBettingViewModel: UpdetedSportBettingViewModel
+    @EnvironmentObject var stage3ViewModel: Stage3ViewModel
     
     var body: some View {
-        VStack {
-            switch originalSportBettingViewModel._gameStatus {
-            case .chooseTeam:
-                chooseTeamView()
-            case .chooseBet:
-                chooseBetSizeView()
-            case .animation:
-                animatingView()
-            case .result:
-                resultView()
-            }
+        switch updetedSportBettingViewModel._gameStatus {
+            
+        case .firstQ:
+            firstQView()
+        case .secondQ:
+            secondQView()
+        case .chooseBet:
+            chooseBetSizeView()
+        case .animation:
+            animatingView()
+        case .result:
+            resultView()
+            
         }
     }
     
-    @ViewBuilder private func chooseTeamButton(_ rate: Int) -> some View {
+    
+    @ViewBuilder private func questionButton(_ text: String, _ rate: Double, action: @escaping () -> Void) -> some View {
         
         Button(action: {
-            originalSportBettingViewModel.playerRate = originalSportBettingViewModel.winRate[rate]
-            originalSportBettingViewModel.setChooseBet()
+            updetedSportBettingViewModel.playerRate += rate
+            action()
         }, label: {
-            Text("\(originalSportBettingViewModel.teamsArray[rate]): \(originalSportBettingViewModel.winRate[rate], specifier: "%.1f")")
+            Text("\(text): \(rate, specifier: "%.1f")")
                 .foregroundColor(.white)
                 .font(.headline)
                 .padding()
@@ -36,12 +40,11 @@ struct OriginalSportBettingView: View {
         
     }
     
-        
-    @ViewBuilder private func chooseTeamView() -> some View {
+    @ViewBuilder private func firstQView() -> some View {
         VStack {
-        Spacer()
+            Spacer()
             VStack {
-                Text("Кто выйграет-то?")
+                Text("На ближайшем матче будет четное число зрителей?")
                     .foregroundColor(.white)
                     .font(.headline)
                     .padding()
@@ -49,25 +52,16 @@ struct OriginalSportBettingView: View {
                     .background(Color.mint.opacity(1))
                     .border(Color.black, width: 2)
                 
+                questionButton("Да", updetedSportBettingViewModel.rate[0]) {
+                    updetedSportBettingViewModel.setChooseSecondQ()
+                }       
+                questionButton("Нет", updetedSportBettingViewModel.rate[1]) {
+                    updetedSportBettingViewModel.setChooseSecondQ()
+                } .padding(.bottom, 32)
 
-                chooseTeamButton(0)
-                
-                Button(action: {
-                    originalSportBettingViewModel.playerRate = originalSportBettingViewModel.drawRate[0]
-                    originalSportBettingViewModel.setChooseBet()
-                }, label: {
-                    Text("Ничья: \(originalSportBettingViewModel.drawRate[0], specifier: "%.1f")")
-                        .foregroundColor(.white)
-                        .font(.headline)
-                        .padding()
-                        .frame(maxWidth: 280)
-                        .background(Color.orange.opacity(1))
-                        .border(Color.black, width: 2)
-                })
-                chooseTeamButton(1)
-
-            } .padding(.bottom, 32)
-        } .frame(maxWidth: .infinity)
+            }
+        }
+        .frame(maxWidth: .infinity)
             .background {
                         ZStack {
                             VStack(spacing: 0) {
@@ -82,13 +76,50 @@ struct OriginalSportBettingView: View {
                     }
     }
     
+    @ViewBuilder private func secondQView()  -> some View {
+        
+        VStack {
+            Spacer()
+            VStack {
+                Text("Кто сделает больше замен?")
+                    .foregroundColor(.white)
+                    .font(.headline)
+                    .padding()
+                    .frame(maxWidth: 280)
+                    .background(Color.mint.opacity(1))
+                    .border(Color.black, width: 2)
+                
+                questionButton("Хозяева", updetedSportBettingViewModel.rate[2]) {
+                    updetedSportBettingViewModel.setChooseBet()
+                }        
+                questionButton("Гости", updetedSportBettingViewModel.rate[3]) {
+                    updetedSportBettingViewModel.setChooseBet()
+                } .padding(.bottom, 32)
+
+            }
+        }
+        .frame(maxWidth: .infinity)
+            .background {
+                        ZStack {
+                            VStack(spacing: 0) {
+                                Spacer()
+                                Rectangle()
+                                    .frame(height: 5)
+                                Rectangle()
+                                    .foregroundStyle(Color(red: 0.13, green: 0.14, blue: 0.19))
+                                    .frame(height: UIScreen.main.bounds.height * 0.4)
+                            }
+                        }.ignoresSafeArea()
+                    }
+        
+    }
     
     @ViewBuilder private func chooseSizeBetButton(_ sizeBet: Int) -> some View {
         Button(action: {
-            originalSportBettingViewModel.playerBetSize = originalSportBettingViewModel.sizeBet[sizeBet]
-            originalSportBettingViewModel.setAnimation()
+            updetedSportBettingViewModel.playerBetSize = updetedSportBettingViewModel.sizeBet[sizeBet]
+            updetedSportBettingViewModel.setAnimation()
         }, label: {
-            Text("\(originalSportBettingViewModel.sizeBet[sizeBet])")
+            Text("\(updetedSportBettingViewModel.sizeBet[sizeBet])")
                 .foregroundColor(.white)
                 .font(.headline)
                 .padding()
@@ -116,7 +147,8 @@ chooseSizeBetButton(2)
 .padding(.bottom, 32)
                 
             }
-        } .frame(maxWidth: .infinity)
+        }
+        .frame(maxWidth: .infinity)
             .background {
                         ZStack {
                             VStack(spacing: 0) {
@@ -157,7 +189,7 @@ chooseSizeBetButton(2)
                     }
         .onAppear {
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.5)  {
-                originalSportBettingViewModel.setResult()
+                updetedSportBettingViewModel.setResult()
             }
         }
     }
@@ -177,7 +209,7 @@ chooseSizeBetButton(2)
     }
     
     @ViewBuilder private func resultView() -> some View {
-        let isWin = originalSportBettingViewModel.determineWin()
+        let isWin = updetedSportBettingViewModel.determineWin()
         
         VStack {
             Spacer()
@@ -189,15 +221,15 @@ chooseSizeBetButton(2)
                 .background(Color.mint.opacity(1))
                 .border(Color.black, width: 2)
             
-            
             resultViewButton("Ладно, давай ещё разок") {
-                originalSportBettingViewModel.setChooseTeam()
+                updetedSportBettingViewModel.setChooseFirstQ()
             }
             resultViewButton("Дальше") {
-                
+                stage3ViewModel.setState(.game4)
             } .padding(.bottom, 32)
             
-        } .frame(maxWidth: .infinity)
+        } 
+        .frame(maxWidth: .infinity)
             .background {
                         ZStack {
                             VStack(spacing: 0) {
@@ -214,6 +246,6 @@ chooseSizeBetButton(2)
     
 }
 
-//#Preview {
-//    OriginalSportBettingView().environmentObject(OriginalSportBettingViewModel())
-//}
+#Preview {
+    UpdetedSportBettingView().environmentObject(UpdetedSportBettingViewModel())
+}

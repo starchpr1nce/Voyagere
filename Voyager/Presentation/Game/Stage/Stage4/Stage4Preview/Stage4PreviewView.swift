@@ -73,7 +73,7 @@ struct Stage4PreviewView: View {
                 }
             case .text9:
                 stageViewWithAnswers {
-                    stage4ViewModel.setState(.game1)
+                    stage4ViewModel.setState(.game3)
                 } negativeAction: {
                     stage4ViewModel.setState(.game1)
                 }

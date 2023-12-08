@@ -65,12 +65,10 @@ struct Stage4Game3View: View {
                 }
             case .text7:
                 stageView {
-                    stage4ViewModel.setState(.game4)
+                    stage4Game3ViewModel.nextText(.game)
                 }
             case .game:
-                stageView {
-                    stage4ViewModel.setState(.preview)
-                }
+                SlotMashineView().environmentObject(SlotMashineViewModel())
             }
             
         }

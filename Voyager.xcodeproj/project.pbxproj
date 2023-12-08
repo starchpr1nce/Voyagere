@@ -71,6 +71,8 @@
 		848AFC052B20810F0071D4AE /* SPRViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848AFC032B20810F0071D4AE /* SPRViewModel.swift */; };
 		848AFC092B2090920071D4AE /* OriginalSportBettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848AFC072B2090920071D4AE /* OriginalSportBettingView.swift */; };
 		848AFC0A2B2090920071D4AE /* OriginalSportBettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848AFC082B2090920071D4AE /* OriginalSportBettingViewModel.swift */; };
+		848AFC132B20A8390071D4AE /* MexicoHippodromView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848AFC112B20A8390071D4AE /* MexicoHippodromView.swift */; };
+		848AFC142B20A8390071D4AE /* MexicoHippodromViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848AFC122B20A8390071D4AE /* MexicoHippodromViewModel.swift */; };
 		84AC0D8F2B1F2ED6004FA735 /* Stage3Game4View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC0D802B1F2ED6004FA735 /* Stage3Game4View.swift */; };
 		84AC0D902B1F2ED6004FA735 /* Stage3Game4ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC0D812B1F2ED6004FA735 /* Stage3Game4ViewModel.swift */; };
 		84AC0D912B1F2ED6004FA735 /* Stage3Game2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC0D832B1F2ED6004FA735 /* Stage3Game2View.swift */; };
@@ -112,6 +114,10 @@
 		84C62E182B04F39B00A11644 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C62E172B04F39B00A11644 /* SceneDelegate.swift */; };
 		84C62E1F2B04F39C00A11644 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84C62E1E2B04F39C00A11644 /* Assets.xcassets */; };
 		84C62E222B04F39C00A11644 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84C62E202B04F39C00A11644 /* LaunchScreen.storyboard */; };
+		84CBF8712B21C12D00C790F4 /* SlotMashineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CBF86F2B21C12D00C790F4 /* SlotMashineView.swift */; };
+		84CBF8722B21C12D00C790F4 /* SlotMashineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CBF8702B21C12D00C790F4 /* SlotMashineViewModel.swift */; };
+		84CBF8752B2204FD00C790F4 /* UpdetedSportBettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CBF8742B2204FD00C790F4 /* UpdetedSportBettingView.swift */; };
+		84CBF8772B22050500C790F4 /* UpdetedSportBettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CBF8762B22050500C790F4 /* UpdetedSportBettingViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -176,6 +182,8 @@
 		848AFC032B20810F0071D4AE /* SPRViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPRViewModel.swift; sourceTree = "<group>"; };
 		848AFC072B2090920071D4AE /* OriginalSportBettingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OriginalSportBettingView.swift; sourceTree = "<group>"; };
 		848AFC082B2090920071D4AE /* OriginalSportBettingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OriginalSportBettingViewModel.swift; sourceTree = "<group>"; };
+		848AFC112B20A8390071D4AE /* MexicoHippodromView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MexicoHippodromView.swift; sourceTree = "<group>"; };
+		848AFC122B20A8390071D4AE /* MexicoHippodromViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MexicoHippodromViewModel.swift; sourceTree = "<group>"; };
 		84AC0D802B1F2ED6004FA735 /* Stage3Game4View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stage3Game4View.swift; sourceTree = "<group>"; };
 		84AC0D812B1F2ED6004FA735 /* Stage3Game4ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stage3Game4ViewModel.swift; sourceTree = "<group>"; };
 		84AC0D832B1F2ED6004FA735 /* Stage3Game2View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stage3Game2View.swift; sourceTree = "<group>"; };
@@ -219,6 +227,10 @@
 		84C62E1E2B04F39C00A11644 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84C62E212B04F39C00A11644 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84C62E232B04F39C00A11644 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84CBF86F2B21C12D00C790F4 /* SlotMashineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlotMashineView.swift; sourceTree = "<group>"; };
+		84CBF8702B21C12D00C790F4 /* SlotMashineViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlotMashineViewModel.swift; sourceTree = "<group>"; };
+		84CBF8742B2204FD00C790F4 /* UpdetedSportBettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdetedSportBettingView.swift; sourceTree = "<group>"; };
+		84CBF8762B22050500C790F4 /* UpdetedSportBettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdetedSportBettingViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -806,6 +818,15 @@
 			path = OriginalSportBettingView;
 			sourceTree = "<group>";
 		};
+		848AFC102B20A8390071D4AE /* MexicoHippodromVIew */ = {
+			isa = PBXGroup;
+			children = (
+				848AFC112B20A8390071D4AE /* MexicoHippodromView.swift */,
+				848AFC122B20A8390071D4AE /* MexicoHippodromViewModel.swift */,
+			);
+			path = MexicoHippodromVIew;
+			sourceTree = "<group>";
+		};
 		84AC0D7F2B1F2ED6004FA735 /* Stage3Game4 */ = {
 			isa = PBXGroup;
 			children = (
@@ -827,6 +848,7 @@
 		84AC0D852B1F2ED6004FA735 /* Stage3Game1 */ = {
 			isa = PBXGroup;
 			children = (
+				848AFC102B20A8390071D4AE /* MexicoHippodromVIew */,
 				84AC0D862B1F2ED6004FA735 /* Stage3Game1ViewModel.swift */,
 				84AC0D872B1F2ED6004FA735 /* Stage3Game1View.swift */,
 			);
@@ -836,6 +858,7 @@
 		84AC0D882B1F2ED6004FA735 /* Stage3Game3 */ = {
 			isa = PBXGroup;
 			children = (
+				84CBF8732B2204D800C790F4 /* UpdetedSportBettingView */,
 				84AC0D892B1F2ED6004FA735 /* Stage3Game3View.swift */,
 				84AC0D8A2B1F2ED6004FA735 /* Stage3Game3ViewModel.swift */,
 			);
@@ -911,6 +934,7 @@
 		84AC0DA72B1F2EFF004FA735 /* Stage4Game3 */ = {
 			isa = PBXGroup;
 			children = (
+				84CBF86E2B21C12D00C790F4 /* SlotMashineView */,
 				84AC0DA82B1F2EFF004FA735 /* Stage4Game3View.swift */,
 				84AC0DA92B1F2EFF004FA735 /* Stage4Game3ViewModel.swift */,
 			);
@@ -1057,6 +1081,24 @@
 			path = Voyager;
 			sourceTree = "<group>";
 		};
+		84CBF86E2B21C12D00C790F4 /* SlotMashineView */ = {
+			isa = PBXGroup;
+			children = (
+				84CBF86F2B21C12D00C790F4 /* SlotMashineView.swift */,
+				84CBF8702B21C12D00C790F4 /* SlotMashineViewModel.swift */,
+			);
+			path = SlotMashineView;
+			sourceTree = "<group>";
+		};
+		84CBF8732B2204D800C790F4 /* UpdetedSportBettingView */ = {
+			isa = PBXGroup;
+			children = (
+				84CBF8742B2204FD00C790F4 /* UpdetedSportBettingView.swift */,
+				84CBF8762B22050500C790F4 /* UpdetedSportBettingViewModel.swift */,
+			);
+			path = UpdetedSportBettingView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1148,6 +1190,7 @@
 				84BF51F02B0B6F2300CC2D9F /* SettingsView.swift in Sources */,
 				840BDB3C2B1E0924004E1D7C /* Stage5FreeplayView.swift in Sources */,
 				84AC0DB02B1F2EFF004FA735 /* Stage4Game4View.swift in Sources */,
+				84CBF8752B2204FD00C790F4 /* UpdetedSportBettingView.swift in Sources */,
 				8413DFC62B0FACB5009AE42F /* SMKeys.swift in Sources */,
 				84741E7E2B14EBF1000B8C59 /* Stage5ViewModel.swift in Sources */,
 				84AC0D932B1F2ED6004FA735 /* Stage3Game1ViewModel.swift in Sources */,
@@ -1160,6 +1203,7 @@
 				84AC0D8F2B1F2ED6004FA735 /* Stage3Game4View.swift in Sources */,
 				84AC0DB12B1F2EFF004FA735 /* Stage4Game4ViewModel.swift in Sources */,
 				84AC0DB32B1F2EFF004FA735 /* Stage4PreviewViewModel.swift in Sources */,
+				84CBF8772B22050500C790F4 /* UpdetedSportBettingViewModel.swift in Sources */,
 				84AC0D952B1F2ED6004FA735 /* Stage3Game3View.swift in Sources */,
 				84BF52052B0B772F00CC2D9F /* InfoViewModel.swift in Sources */,
 				840BDB3A2B1E0914004E1D7C /* Stage5Game4ViewModel.swift in Sources */,
@@ -1168,6 +1212,7 @@
 				8406841F2B1A0DA000E0C8E6 /* Stage1Game1View.swift in Sources */,
 				84741EDB2B15E923000B8C59 /* Stage1References.swift in Sources */,
 				8413DFC12B0F77B1009AE42F /* WheelComplicatedViewModel.swift in Sources */,
+				848AFC142B20A8390071D4AE /* MexicoHippodromViewModel.swift in Sources */,
 				8406841D2B1A0D8400E0C8E6 /* Stage1PreviewView.swift in Sources */,
 				84C62E162B04F39B00A11644 /* AppDelegate.swift in Sources */,
 				84AC0DB22B1F2EFF004FA735 /* Stage4PreviewView.swift in Sources */,
@@ -1183,6 +1228,7 @@
 				848AFBF62B1F5FEF0071D4AE /* Stage1Game4ViewModel.swift in Sources */,
 				84741E742B14EBBA000B8C59 /* Stage3View.swift in Sources */,
 				84AC0D902B1F2ED6004FA735 /* Stage3Game4ViewModel.swift in Sources */,
+				84CBF8722B21C12D00C790F4 /* SlotMashineViewModel.swift in Sources */,
 				840BDB2A2B1E07F4004E1D7C /* Stage5PreviewViewModel.swift in Sources */,
 				84BF51E82B0B6CDE00CC2D9F /* ContantView.swift in Sources */,
 				840BDB302B1E08D9004E1D7C /* Stage5Game2View.swift in Sources */,
@@ -1209,6 +1255,7 @@
 				840684112B17945600E0C8E6 /* FinalReference.swift in Sources */,
 				84741EEC2B16514B000B8C59 /* Stage5References.swift in Sources */,
 				84AC0DB52B1F2EFF004FA735 /* Stage4Game3ViewModel.swift in Sources */,
+				84CBF8712B21C12D00C790F4 /* SlotMashineView.swift in Sources */,
 				84AC0DAF2B1F2EFF004FA735 /* Stage4View.swift in Sources */,
 				844D15792B1A2B2F00896576 /* Stage2Game2View.swift in Sources */,
 				84741E722B14EB9A000B8C59 /* Stage2ViewModel.swift in Sources */,
@@ -1232,6 +1279,7 @@
 				84BF51FE2B0B760A00CC2D9F /* OnboardingView.swift in Sources */,
 				840BDB282B1E07EA004E1D7C /* Stage5PreviewView.swift in Sources */,
 				840BDB382B1E090A004E1D7C /* Stage5Game4View.swift in Sources */,
+				848AFC132B20A8390071D4AE /* MexicoHippodromView.swift in Sources */,
 				8406842D2B1A0F4500E0C8E6 /* Stage1Game1ViewModel.swift in Sources */,
 				84AC0D972B1F2ED6004FA735 /* Stage3PreviewViewModel.swift in Sources */,
 				844D15772B1A2B1A00896576 /* Stage2Game1ViewModel.swift in Sources */,
